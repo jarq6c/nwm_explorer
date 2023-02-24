@@ -1,7 +1,7 @@
 import click
 import pandas as pd
-from my_package.my_module import make_dataframe
-from my_package._version import __version__
+from nwm_explorer.NWMExplorer import make_dataframe
+from nwm_explorer._version import __version__
 
 @click.command()
 @click.option("-c", "--ncols", "ncols", nargs=1, type=int, help="Number of columns", default=3)
@@ -20,7 +20,7 @@ def run(
     df = make_dataframe(ncols=ncols, nrows=nrows)
 
     # Print
-    print(f"my_package {__version__}")
+    print(f"nwm_explorer {__version__}")
     with pd.option_context("display.precision", 2):
         print(df)
 

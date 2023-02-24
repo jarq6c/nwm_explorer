@@ -1,7 +1,7 @@
 import pytest
 from click.testing import CliRunner
-from my_package.cli import run
-from my_package._version import __version__
+from nwm_explorer.cli.nwm2gpkg import run
+from nwm_explorer._version import __version__
 
 @pytest.fixture
 def runner_result():
@@ -14,4 +14,4 @@ def test_hello_world(runner_result):
 
     # Check first line of output
     first_line = runner_result.output.split("\n")[0]
-    assert first_line == f"my_package {__version__}"
+    assert first_line == f"nwm_explorer {__version__}"

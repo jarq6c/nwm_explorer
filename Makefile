@@ -1,5 +1,5 @@
-TAG=my-tag
-APP=my-cli
+TAG=nwm-explorer
+APP=nwm2gpkg
 ARGUMENTS=-c 5 -r 7
 
 .PHONY: build setup run tests
